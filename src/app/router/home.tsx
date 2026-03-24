@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { getMe } from '../../features/auth/api'
 import { useAuthStore } from '../../features/auth/store'
 
@@ -55,6 +55,11 @@ export default function HomePage() {
         )}
 
         {meQuery.isError && <p className='error-message'>No se pudo cargar /auth/me, revisa el token o permisos.</p>}
+
+        <div className='nav-links'>
+          <Link to='/users'>Ir a usuarios</Link>
+          <Link to='/user-roles'>Ir a asignacion de roles</Link>
+        </div>
 
         <button onClick={handleLogout}>Cerrar sesion</button>
       </section>

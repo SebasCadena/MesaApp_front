@@ -81,3 +81,74 @@ button:disabled {
   color: #dc2626;
   margin: 0;
 }
+
+.page-shell {
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: grid;
+  place-items: start center;
+}
+
+.panel {
+  width: min(100%, 980px);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.grid-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.grid-form input,
+.grid-form select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem;
+}
+
+.checkbox-block {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field-errors {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.field-errors small {
+  color: #dc2626;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.nav-links a {
+  color: #1d4ed8;
+}

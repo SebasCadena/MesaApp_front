@@ -33,7 +33,10 @@ export default function LoginPage() {
   })
 
   const onSubmit = (values: LoginSchema) => {
-    loginMutation.mutate(values)
+    loginMutation.mutate({
+      ...values,
+      cedula: values.cedula.trim(),
+    })
   }
 
   if (isAuthenticated) {
